@@ -4,6 +4,13 @@ A simple portfolio page made with Wagtail and Bootstrap4. Tried to hardcode as l
 
 View the demo here: https://rafrasenberg.nl
 
+## Features
+- Bootstrap 4
+- All content can be adjusted through Wagtail admin, so you can choose your preferred language
+- Changeable jQuery filters through Wagtail admin for portfolio items
+- Google Analytics tracking code support
+
+
 ## Prerequisites
 Python3 and virtualenv installed on your localmachine or server. There is enough you can find about that on Google.
 
