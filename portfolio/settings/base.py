@@ -31,6 +31,7 @@ INSTALLED_APPS = [
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
+    'wagtail.contrib.modeladmin',
     'wagtail.contrib.settings',
     'wagtail.contrib.routable_page',
     'wagtail.embeds',
@@ -45,6 +46,8 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+
+    'wagtailtrans',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -64,6 +67,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 
     'wagtail.core.middleware.SiteMiddleware',
+    'wagtailtrans.middleware.TranslationMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
