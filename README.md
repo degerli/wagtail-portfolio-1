@@ -9,6 +9,7 @@ View the demo here: https://rafrasenberg.nl
 - All content can be adjusted through Wagtail admin, so you can choose your preferred language
 - Changeable jQuery (Yes, yes old boring jQuery get over it fancy JS folk) filters through Wagtail admin for portfolio items
 - Google Analytics tracking code support
+- Wagtail-metadata
 
 
 ## Prerequisites
