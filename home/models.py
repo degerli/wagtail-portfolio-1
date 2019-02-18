@@ -123,8 +123,8 @@ class PortfolioSettings(BaseSetting):
 @register_setting
 class GoogleAnalytics(BaseSetting):
     # Personal information
-    analytics_code          = models.CharField(max_length=255, blank=True, null=True, help_text='Your analytics tracking code')
+    analytics_code          = models.TextField(blank=True, null=True, help_text='Your analytics tracking code')
 
     content_panels = Page.content_panels + [
-        FieldPanel('analytics_code', widget=forms.Textarea),
+        FieldPanel('analytics_code'),
     ]
