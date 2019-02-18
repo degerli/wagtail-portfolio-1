@@ -7,7 +7,7 @@ View the demo here: https://rafrasenberg.nl
 ## Features
 - Bootstrap 4
 - All content can be adjusted through Wagtail admin, so you can choose your preferred language
-- Changeable jQuery filters through Wagtail admin for portfolio items
+- Changeable jQuery (Yes, yes old boring jQuery get over it fancy JS folk) filters through Wagtail admin for portfolio items
 - Google Analytics tracking code support
 
 
