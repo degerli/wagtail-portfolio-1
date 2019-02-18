@@ -2,14 +2,13 @@ from django.db import models
 from django import forms
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField
-from wagtailtrans.models import TranslatablePage
 
 from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, FieldRowPanel, TabbedInterface, ObjectList
 from wagtail.contrib.settings.models import BaseSetting, register_setting
 from wagtail.images.edit_handlers import ImageChooserPanel
 
 
-class HomePage(TranslatablePage):
+class HomePage(Page):
     # Add the intro fields to homepage model
     intro_heading           = models.CharField(max_length=255, null=True)
     intro_sub_heading       = models.CharField(max_length=255, null=True)

@@ -46,8 +46,7 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
-
-    'wagtailtrans',
+ß
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -67,7 +66,6 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 
     'wagtail.core.middleware.SiteMiddleware',
-    'wagtailtrans.middleware.TranslationMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
