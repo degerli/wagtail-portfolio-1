@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static wagtailsettings_tags wagtailimages_tags wagtailcore_tags %}
+{% get_settings %}
+
+{% block content %}
+<section class="intro-section">
+  <div class="container">
+
+    <div class="intro">
+      <div class="row">
+
+        <div class="col-sm-8 col-md-4 col-lg-3">
+           <div data-tilt><div class="profile-img margin-b-30">{% image settings.home.PortfolioSettings.profile_pic original class="img-fluid" %}</div></div>
+        </div><!-- col-sm-8 -->
+
+        <div class="col-sm-10 col-md-5 col-lg-6">
+            <h2><b>{{ settings.home.PortfolioSettings.name }}</b></h2>
+            <h4>{{ settings.home.PortfolioSettings.heading }}</h4>
+            <ul class="information margin-tb-30">
+              <li><b class="font-green">E-mail</b> : {{ settings.home.PortfolioSettings.email }}</li>
+              <li><b class="font-green">Tel</b> : {{ settings.home.PortfolioSettings.telephone }}</li>
+            </ul>
+            <ul class="social-icons">
+              <li><a href="{{ settings.home.PortfolioSettings.social_linkedin }}"><i class="ion-social-linkedin"></i></a></li>
+              <li><a href="{{ settings.home.PortfolioSettings.social_twitter }}"><i class="ion-social-twitter"></i></a></li>
+              <li><a href="{{ settings.home.PortfolioSettings.social_github }}"><i class="ion-social-github"></i></a></li>
+            </ul>
+        </div><!-- col-sm-8 -->
+
+        <div class="col-sm-10 col-md-3 col-lg-3">
+          <a class="downlad-btn" href="#portfolio-section-scroll">Portfolio</a>
+        </div><!-- col-lg-2 -->
+
+      </div><!-- row -->
+
+    </div><!-- intro -->
+  </div><!-- container -->
+</section><!-- intro-section -->
+
+
+
+
+<section class="about-section section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 center-text">
+        <div class="heading ">
+          <h3><b>{{ page.intro_heading }}</b></h3>
+          <h6 class="font-lite-black"><b>{{ page.intro_sub_heading }}</b></h6>
+        </div>
+      </div><!-- col-sm-3 -->
+      <div class="col-sm-12 col-md-6">
+        {{ page.intro_left|richtext }}
+      </div><!-- col-sm-6 -->
+      <div class="col-sm-12 col-md-6">
+        {{ page.intro_right|richtext }}
+      </div><!-- col-sm-6 -->
+
+
+      <div class="col-sm-12" id="counter">
+        <div class="row" >
+
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="counter margin-b-50">
+              <h1 class="title"><b><span class="counter-value" data-duration="1400" data-count="{{ settings.home.PortfolioSettings.stat_number_1 }}">0</span></b></h1>
+              <h5 class="desc"><b>{{ settings.home.PortfolioSettings.stat_description_1 }}</b></h5>
+            </div><!-- counter -->
+          </div><!-- col-md-3-->
+
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="counter margin-b-50">
+              <h1 class="title"><b><span class="counter-value" data-duration="1400" data-count="{{ settings.home.PortfolioSettings.stat_number_2 }}">0</span></b></h1>
+              <h5 class="desc"><b>{{ settings.home.PortfolioSettings.stat_description_2 }}</b></h5>
+            </div><!-- counter -->
+          </div><!-- col-md-3-->
+
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="counter margin-b-50">
+              <h1 class="title"><b><span class="counter-value" data-duration="1400" data-count="{{ settings.home.PortfolioSettings.stat_number_3 }}">0</span></b></h1>
+              <h5 class="desc"><b>{{ settings.home.PortfolioSettings.stat_description_3 }}</b></h5>
+            </div><!-- counter -->
+          </div><!-- col-md-3-->
+
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="counter margin-b-50">
+              <h1 class="title"><b><span class="counter-value" data-duration="1400" data-count="{{ settings.home.PortfolioSettings.stat_number_4 }}">0</span></b></h1>
+              <h5 class="desc"><b>{{ settings.home.PortfolioSettings.stat_description_4 }}</b></h5>
+            </div><!-- counter -->
+          </div><!-- col-md-3-->
+
+        </div><!-- row-->
+      </div><!-- col-sm-12 -->
+
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- about-section -->
+
+<section class="portfolio-section section center-text">
+  <div class="container" id="portfolio-section-scroll">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="heading">
+          <h3><b>{{ page.portfolio_heading }}</b></h3>
+          <h6 class="font-lite-black"><b>{{ page.portfolio_sub_heading }}</b></h6>
+        </div>
+      </div><!-- col-sm-12 -->
+
+      <div class="col-sm-12">
+        <div class="portfolioFilter clearfix margin-b-80">
+          <a href="{% static "#" data-filter="*" class="current"><b>All projects</b></a>
+          <a href="{% static "#" data-filter=".{{ settings.projects.FilterSettings.filter1 }}"><b>{{ settings.projects.FilterSettings.filter1 }}</b></a>
+          <a href="{% static "#" data-filter=".{{ settings.projects.FilterSettings.filter2 }}"><b>{{ settings.projects.FilterSettings.filter2 }}</b></a>
+          <a href="{% static "#" data-filter=".{{ settings.projects.FilterSettings.filter3 }}"><b>{{ settings.projects.FilterSettings.filter3 }}</b></a>
+        </div><!-- portfolioFilter -->
+      </div><!-- col-sm-8 -->
+    </div><!-- row -->
+
+{% include 'projects/projects_page.html' with page=portfolio_page only %}
+
+
+<footer>
+  <p class="copyright">View source on <a href="https://github.com/webconexus/wagtail-portfolio">Github</a></p>
+  </footer>
+
+
+
+{% endblock %}

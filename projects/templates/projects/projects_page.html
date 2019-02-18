@@ -1,0 +1,16 @@
+{% load wagtailcore_tags static wagtailimages_tags %}
+
+
+    <div class="portfolioContainer margin-b-50">
+
+      {% for post in page.get_children.specific %}
+      <div class="p-item {% for technology in post.technologies.all %} {{ technology.name }} {% endfor %}">
+        <a href="{{ post.link }}" class="portfolio-link" target="_blank">{{ post.title }}</a>
+          {% image post.project_image original class="img-fluid" alt=post.title %}
+        </a>
+      </div>
+      {% endfor %}
+
+    </div><!-- portfolioContainer -->
+  </div><!-- container -->
+</section><!-- portfolio-section -->
