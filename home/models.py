@@ -119,3 +119,12 @@ class PortfolioSettings(BaseSetting):
         ObjectList(second_tab_panels, heading='Social media'),
         ObjectList(third_tab_panels, heading='Business stats'),
     ])
+
+@register_setting
+class GoogleAnalytics(BaseSetting):
+    # Personal information
+    analytics_code          = models.CharField(max_length=255, blank=True, null=True, help_text='Your analytics tracking code', widget=forms.TextArea)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('analytics_code'),
+    ]
