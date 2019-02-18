@@ -34,6 +34,7 @@ You will get a error when first launching the homepage because your are pulling 
 ## Some tips:
 - Personal information, social media links and the counters can be adjusted in Wagtail admin. You will find this in settings --> portfolio settings.
 - Portfolio filters can be added through settings --> filters settings. After this you can create a snippet 'Technology' which will be available to you when you add a project, through a checkbox. This will give visitors the option to filter through your projects by category.
+- Analytics code can be added through settings --> Google analtyics.
 - To add a portfolio item, create a child page (Individual Projects Page) of the parent page (Projects Page), here you can insert project image, link and title. I added some other field but they are not rendered in the template. Feel free to extend it by yourself.
 
 Please feel free to use it. If you run into any issues please feel free to file an issue and I will try to resolve it.
