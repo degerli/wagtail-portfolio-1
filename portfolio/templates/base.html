@@ -6,7 +6,7 @@
 
 	{{ settings.home.GoogleAnalytics.analytics_code|safe }}
 
-	
+
   {# Global stylesheets #}
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
@@ -18,11 +18,10 @@
   <link href="{% static 'css/styles.css' %}" rel="stylesheet">
   <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
 
-    </head>
+</head>
 
-    <body class="{% block body_class %}{% endblock %}">
 
-        {% block content %}{% endblock %}
+  {% block content %} {% endblock %}
 
 
     {# Global javascript #}
